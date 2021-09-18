@@ -14,4 +14,5 @@ Some ideas for obtaining a :gift: if you are the first that:
 User name | NIA | Travis-CI|Score
 ----------|-----|----------|-----
 [UNIZAR-30246-WebEngineering](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race) |30246 | [![Build Status](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race/actions/workflows/ci.yml)
+Isaac Velasco Calvo | 758986 | [![Build Status](https://github.com/pkmniako/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/pkmniako/lab1-git-race/actions/workflows/ci.yml)
 Binhui Chen Zhou | 779799 | [![Build Status](https://github.com/779799/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/779799/lab1-git-race/actions/workflows/ci.yml)
