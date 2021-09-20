@@ -14,11 +14,8 @@ class HelloControllerUnitTests {
     fun testMessage() {
         val map = mutableMapOf<String,Any>()
         val view = controller.welcome(map)
-
         assertThat(view).isEqualTo("welcome")
         assertThat(map.containsKey("message")).isTrue
-        assertThat(map.containsKey("direction")).isTrue
         assertThat(map["message"]).isEqualTo("Hello World")
-        assertThat(map["direction"]).isEqualTo("prueba")
     }
 }

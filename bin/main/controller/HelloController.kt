@@ -37,8 +37,6 @@ class HelloController {
     fun welcome(model: MutableMap<String, Any>): String {
         // This is used to associate the variable "message" of the template welcome with a value.
         model["message"] = message
-        model["direction"] = "prueba"
         return "welcome"
     }
-
 }
