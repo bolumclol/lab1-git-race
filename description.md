@@ -90,3 +90,7 @@ The file `src/test/kotlin/IntegrationTest.kt` contains two tests that checks the
   - A file with a header equal to that of `"text/css"`.
 
 This ensures the webpage has a valid CSS file.
+
+### Configuration Metadata
+Spring Boot generate a metadata file called `"spring-configuration-metadata.json"` that provide details of all supported configuration properties.
+It's located in `src/main/resources/META-INF/`. There is a `property` identified by the `name` `app.message`, its default value is set in `application.properties`.
