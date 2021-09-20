@@ -3,7 +3,8 @@ package es.unizar.webeng.hello.controller
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
-
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 /**
  * **Note**
  *
@@ -28,7 +29,7 @@ class HelloController {
      * 
      * The annotation `@GetMapping` acts as a shortcut for `@RequestMapping(method =
      * RequestMethod.GET)`. This allows us to handle all the GET petitions to the path `/` using
-     * this controller.
+	 * this controller.
      *
      * @param model collection with the data used to update the view (template)
      * @return the template with the updated information
@@ -38,5 +39,27 @@ class HelloController {
         // This is used to associate the variable "message" of the template welcome with a value.
         model["message"] = message
         return "welcome"
+    }
+	
+	/**
+     * This function act as the handler of the HelloController.
+     *
+     * **Note** 
+     * 
+     * The annotation `@GetMapping` allows us to handle all the GET petitions to the path `/date`
+	 * using this controller.
+     *
+     * @param model collection with the data used to update the view (template)
+     * @return the template with the updated information
+     */
+    @GetMapping("/date")
+    fun date(model: MutableMap<String, Any>): String {
+		//Get the current date with format "yyyy-MM-dd"
+		val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+		val currentDate = LocalDateTime.now().format(formatter)
+		// This is used to associate the variable "currentDate" of the template date 
+		// with the current date.
+		model["currentDate"] = currentDate
+        return "date"
     }
 }
