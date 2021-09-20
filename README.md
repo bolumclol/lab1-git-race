@@ -22,3 +22,4 @@ User name | NIA | CI |Score
 [Jorge Laguna](https://github.com/topopelon/lab1-git-race) | 735550 | [![Build Status](https://github.com/topopelon/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/topopelon/lab1-git-race/actions/workflows/ci.yml) | half :gift:
 [Carlos Navarro Gascón](https://github.com/Lulay7/lab1-git-race) |780180 | [![Build Status](https://github.com/Lulay7/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/Lulay7/lab1-git-race/actions/workflows/ci.yml)
 [German Garces](https://github.com/fntkg/lab1-git-race)| 757024 | [![Build Status](https://github.com/fntkg/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/fntkg/lab1-git-race/actions/workflows/ci.yml) | :gift: candidate
+Sergio Benitez Mombiela | 755787 | [![Build Status](https://github.com/SergioBenitez755787/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/SergioBenitez755787/lab1-git-race/actions/workflows/ci.yml)
