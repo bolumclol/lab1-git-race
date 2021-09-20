@@ -37,6 +37,17 @@ class HelloController {
     fun welcome(model: MutableMap<String, Any>): String {
         // This is used to associate the variable "message" of the template welcome with a value.
         model["message"] = message
+		System.out.println("Welcome");
         return "welcome"
     }
+	
+	@GetMapping("/changeLanguage")
+	fun handleButtonLanguage(model: MutableMap<String, Any>): String {
+		if (message == "Hola estudiante") message = "Hello student"
+		else if (message == "Hello student") message = "Salut etudiant"
+		else message = "Hola estudiante"
+        model["message"] = message
+		System.out.println("change Language");
+		return "welcome"
+	}
 }
