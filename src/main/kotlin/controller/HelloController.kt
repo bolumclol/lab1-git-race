@@ -37,7 +37,6 @@ class HelloController {
     fun welcome(model: MutableMap<String, Any>): String {
         // This is used to associate the variable "message" of the template welcome with a value.
         model["message"] = message
-		System.out.println("Welcome");
         return "welcome"
     }
 	
@@ -55,7 +54,6 @@ class HelloController {
 		else if (message == "Hello student") message = "Salut etudiant"
 		else message = "Hola estudiante"
         model["message"] = message
-		System.out.println("change Language");
 		return "welcome"
 	}
 }
