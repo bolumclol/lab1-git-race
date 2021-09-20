@@ -41,6 +41,14 @@ class HelloController {
         return "welcome"
     }
 	
+	/**
+     * This function acts as the handler of the event "onClick" of the button "change language".
+     *
+
+     *
+     * @param model collection with the data used to update the view (template)
+     * @return the template with the updated information
+     */
 	@GetMapping("/changeLanguage")
 	fun handleButtonLanguage(model: MutableMap<String, Any>): String {
 		if (message == "Hola estudiante") message = "Hello student"
