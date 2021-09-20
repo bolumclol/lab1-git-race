@@ -9,32 +9,31 @@ import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers.*
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
-@WebMvcTest(HelloController::class)
-class HelloControllerMVCTests {
-    /**
-     * Assigns the property `app.message` in `application.properties` to [message]
-     */ 
-    @Value("\${app.message}") private lateinit var message: String
-
+@WebMvcTest(DateController::class)
+class DateControllerMVCTests {
     /**
      * Mocks the Spring controller
      */
     @Autowired private lateinit var mockMvc: MockMvc
-
-    /**
-     * With the controller [HelloController] mocked, test performs a GET request to server-side
-     * endpoint "/" and:
+	/**
+     * With the controller [DateController] mocked, test performs a GET request to server-side
+     * endpoint "/date" and:
      * 
      * - print the response
      * - expect to receive an OK status (code 200)
-     * - expect the atributte "message" of the model to be [message]
+     * - expect the atributte "currentDate" of the model to be the current date 
+	 * 	 with format "yyyy-MM-dd"
      */
     @Test
-    fun testMessage() {
-        mockMvc.perform(get("/"))
+    fun testDate() {
+        mockMvc.perform(get("/date"))
                 .andDo(print())
                 .andExpect(status().isOk)
-                .andExpect(model().attribute("message", equalTo(message)))
+                .andExpect(model().attribute("currentDate", 
+						equalTo(LocalDateTime.now()
+								.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))))
     }
 }

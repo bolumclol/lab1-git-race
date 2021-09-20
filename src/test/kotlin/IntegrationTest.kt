@@ -58,4 +58,22 @@ class IntegrationTest {
             assertThat(headers.contentType).isEqualTo(MediaType.valueOf("text/css"))
         }
     }
+	
+	/*
+     *   Test that checks if the local server is running, then checks the content
+     *   of the 'date' page's body. If it contains the title "Date" and the text
+	 *	 "Today is ..." the test passes.
+     *   Otherwise the test fails.
+     */
+    @Test
+    fun testDate() {
+        // Creates synchronous client to perform requests
+        with(restTemplate.getForEntity("http://localhost:$port/date", String::class.java)) {
+            // Checks the server is running correctly (returns code 200: "OK")
+            assertThat(statusCode).isEqualTo(HttpStatus.OK)
+            // Checks the body contains the title "Date"
+            assertThat(body).contains("<title>Date")
+			assertThat(body).contains("Today is ...")
+        }
+    }
 }
