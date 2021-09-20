@@ -21,3 +21,4 @@ User name | NIA | CI |Score
 [Rubén Subías](https://github.com/Gelpa99) |759406 | [![Build Status](https://github.com/Gelpa99/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/Gelpa99/lab1-git-race/actions/workflows/ci.yml)
 [Jorge Laguna](https://github.com/topopelon/lab1-git-race) | 735550 | [![Build Status](https://github.com/topopelon/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/topopelon/lab1-git-race/actions/workflows/ci.yml) | half :gift:
 [Carlos Navarro Gascón](https://github.com/Lulay7/lab1-git-race) |780180 | [![Build Status](https://github.com/Lulay7/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/Lulay7/lab1-git-race/actions/workflows/ci.yml)
+[Jaime Yoldi Vigueras](https://github.com/jaimoyok/lab1-git-race.git) |779057 |[![Build Status](https://github.com/jaimoyok/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/Lulay7/lab1-git-race/actions/workflows/ci.yml)
