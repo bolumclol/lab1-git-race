@@ -26,6 +26,12 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.5.21")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
     implementation("org.webjars:bootstrap:5.1.0")
+
+    // Enables spring actuator. Required for metrics export.
+    implementation("org.springframework.boot:spring-boot-starter-actuator:2.5.4")
+    // Enables exporting metrics in /actuator/prometheus
+    runtimeOnly("io.micrometer:micrometer-registry-prometheus:1.7.4")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test:2.5.4")
 }
 
