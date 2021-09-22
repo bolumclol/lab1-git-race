@@ -2,7 +2,7 @@ package es.unizar.webeng.hello.controller
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Controller
-import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.*
 
 /**
  * **Note**
@@ -38,5 +38,21 @@ class HelloController {
         // This is used to associate the variable "message" of the template welcome with a value.
         model["message"] = message
         return "welcome"
+    }
+    
+    /**
+    * This function acts as the handler of the HelloController.
+    * shows a template saying if your nia (pased by url) is even or odd.
+    * 
+    * **Note**
+    * @param nia parameter passed by url
+    * @param model collection with the data used to update the view (template)
+    * @return the template with the updated information
+    */
+    @GetMapping("/isOdd/{nia}")
+    fun new(@PathVariable nia: String, model: MutableMap<String, Any>): String {
+        if (nia.toInt()%2 == 0) model["message"] = "Your nia: " + nia + " is even"
+        else  model["message"] = "Your nia: " + nia + " is odd"
+        return "new"
     }
 }
