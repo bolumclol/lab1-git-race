@@ -22,6 +22,7 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web:2.5.4")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf:2.5.4")
+    implementation("org.springframework.boot:spring-boot-starter-mustache:2.5.4")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.5")
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.5.21")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
