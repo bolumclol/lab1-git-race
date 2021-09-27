@@ -7,6 +7,17 @@ plugins {
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.5.30"
     kotlin("plugin.spring") version "1.5.30"
+
+    // Plugins for persistance
+    kotlin("plugin.jpa") version "1.5.30"
+    kotlin("plugin.allopen") version "1.5.30"
+}
+
+allOpen {
+  annotation("javax.persistence.Query")
+  annotation("javax.persistence.Entity")
+  annotation("javax.persistence.Embeddable")
+  annotation("javax.persistence.MappedSuperclass")
 }
 
 // Sets groupID and version of the task
@@ -27,6 +38,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.webjars:bootstrap:5.1.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    runtimeOnly("com.h2database:h2")
+    runtimeOnly("org.springframework.boot:spring-boot-devtools")
 }
 
 // Makes Kotlin use the JVM 11 toolchain

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random information</title>
+    <link
+    	th:href="@{/webjars/bootstrap/5.1.0/css/bootstrap.min.css}"
+    	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    	rel="stylesheet"
+    	crossorigin="anonymous"
+    />
+  </head>
+  <body>
+	<!-- Sidebar menu, based on bootstrap examples (Snippets -> Sidebars) https://getbootstrap.com/docs/5.1/examples/ -->
+    <div class="p-3 text-white bg-dark" style="width: 20%; height: 100%; position: fixed; top: 0; left: 0;">
+		<div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+			<span class="fs-4">Menu</span>
+        </div>
+		<hr>
+		<ul class="nav nav-pills flex-column mb-auto">
+			<li class="nav-item">
+				<a href="/" class="nav-link active" aria-current="page">
+					Home
+				</a>
+			</li>
+			<li>
+				<a href="#" class="nav-link text-white">
+					<svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+					Dashboard
+				</a>
+			</li>
+			<li>
+				<a href="#" class="nav-link text-white">
+					<svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+					Orders
+				</a>
+			</li>
+			<li>
+				<a href="#" class="nav-link text-white">
+					<svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+					Products
+				</a>
+			</li>
+			<li>
+				<a href="#" class="nav-link text-white">
+					<svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+					Customers
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- End of the sidebar menu -->
+
+    <div class="px-4 py-5 my-5 text-center" style="width: 80%; position: fixed; right: 0;">
+		<!-- Here is where the page displays the random quote -->
+    	<p class="lead mb-4" th:text="${quote}">Default sentence to display.</p>
+    	<p class="lead mb-4" th:text="${saidBy}">Default sentence to display.</p>
+    	<a class="btn btn-primary" href="/" role="button">Back to home</a>
+    
+		<hr>
+
+		<h2>Do you want to add a new one?</h2>
+		<br>
+		<!-- Form to add a new quote with author, both are required for it to be sent -->
+		<form class="form-signin" action="/quotes" method="GET">
+	    	<div class="form-label-group">
+        		<input type="text" name="inputQuote" class="form-control" placeholder="Enter the quote" required>
+      		</div>
+			<br>
+
+			<div class="form-label-group">
+				<input type="text" name="inputAuthor" class="form-control" placeholder="Enter who said it" required>
+			</div>
+			<br>
+
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+			<p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+		</form>
+	</div>
+  </body>
+</html>
