@@ -189,6 +189,8 @@ Now you can access [the website](http://localhost:8080/) to check if everything 
 ## Localhost refused to connect issue
 If you have followed the steps correctly, but you see this message when you search localhost:8080 in your web browser: 
 
+[Localhost refused to connect](https://raw.githubusercontent.com/dolansete/Imagenes/main/Screenshot%20from%202021-09-28%2015-02-42.png)
+
 Try to follow these steps:
 - Open your browser menu
 - Hover the mouse on "More tools"
