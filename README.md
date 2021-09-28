@@ -24,3 +24,5 @@ User name | NIA | CI |Score
 [Adrian Garcia](https://github.com/adrigaarcia/lab1-git-race) | 722292 | [![Build Status](https://github.com/adrigaarcia/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/adrigaarcia/lab1-git-race/actions/workflows/ci.yml) | **Moby Dick III** :gift:
 [Pablo Jordán Lucia](https://github.com/pabloJordan24/lab1-git-race) | 757166 | [![Build Status](https://github.com/pabloJordan24/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/pabloJordan24/lab1-git-race/actions/workflows/ci.yml)
 [José Marín Díez](https://github.com/jmarindiez/lab1-git-race) | 778148 | [![Build Status](https://github.com/jmarindiez/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/jmarindiez/lab1-git-race/actions/workflows/ci.yml) | **Home improvement (mustache)** :gift:
+[Héctor Bara Lles](https://github.com/dolansete/lab1-git-race) | 778097 | [![Build Status](https://github.com/dolansete/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/dolansete/lab1-git-race/actions/workflows/ci.yml)
+
