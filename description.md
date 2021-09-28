@@ -170,8 +170,8 @@ Run the following command to build the images if needed and run the app:
 docker-compose up
 ```
 
-It might show the following error:
-
+It might show the following error: buscas en tu navegador
+ problema
 ```text
 ERROR: Couldn't connect to Docker daemon at [...]
 ```
@@ -185,6 +185,19 @@ sudo docker-compose up
 Now you can access [the website](http://localhost:8080/) to check if everything works correctly.
 
 **Note:** By default, local port 8080 is used to deploy the app, however, it can be modified in ``docker-compose.yml``, setting ``8080:8080`` to ``<your-port>:8080``.
+
+## Localhost refused to connect issue
+If you have followed the steps correctly, but you see this message when you search localhost:8080 in your web browser: 
+
+Try to follow these steps:
+- Open your browser menu
+- Hover the mouse on "More tools"
+- Select "Clear browsing data"
+- Choose "All time" option and mark the three boxes
+- Press the clear data button
+(This is how you do it in Google Chrome, but it should be almost the same with other browsers)
+
+**Note:** If you have tried this and the error message is still there, check this [website](https://www.thecoldwire.com/localhost-refused-to-connect/#:~:text=Check%20Your%20Connection,router%20or%20call%20the%20ISP). 
 
 ## With Kuvernetes
 
