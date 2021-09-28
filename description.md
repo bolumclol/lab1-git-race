@@ -170,8 +170,7 @@ Run the following command to build the images if needed and run the app:
 docker-compose up
 ```
 
-It might show the following error: buscas en tu navegador
- problema
+It might show the following error: 
 ```text
 ERROR: Couldn't connect to Docker daemon at [...]
 ```
