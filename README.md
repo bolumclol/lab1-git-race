@@ -4,7 +4,6 @@ Please, go to the [Wiki](https://github.com/UNIZAR-30246-WebEngineering/lab1-git
 
 Some ideas for obtaining a :gift: if you are the first that:
 
-- **Home improvement**: Use a markup template language different from Thymeleaf (server side)
 - **Home improvement II**: Use an endpoint that returns the message and update the HTML in client side (no MVC server side)
 - **Home improvement III**: Use moder JS framework (React) and a Restful web service (no MVC server side)
 
@@ -23,4 +22,6 @@ User name | NIA | CI |Score
 [Íñigo Aréjula](https://github.com/arejula27/lab1-git-race) | 785370 | [![Build Status](https://github.com/Tomenos18/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/arejula27/lab1-git-race/actions/workflows/ci.yml)
 [Óscar Pueyo Ciutad](https://github.com/iksopo) | 780378 | [![Build Status](https://github.com/iksopo/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/iksopo/lab1-git-race/actions/workflows/ci.yml) | **Moby Dick II** :gift:
 [Adrian Garcia](https://github.com/adrigaarcia/lab1-git-race) | 722292 | [![Build Status](https://github.com/adrigaarcia/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/adrigaarcia/lab1-git-race/actions/workflows/ci.yml) | **Moby Dick III** :gift:
+[Pablo Jordán Lucia](https://github.com/pabloJordan24/lab1-git-race) | 757166 | [![Build Status](https://github.com/pabloJordan24/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/pabloJordan24/lab1-git-race/actions/workflows/ci.yml)
+[José Marín Díez](https://github.com/jmarindiez/lab1-git-race) | 778148 | [![Build Status](https://github.com/jmarindiez/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/jmarindiez/lab1-git-race/actions/workflows/ci.yml) | **Home improvement (mustache)** :gift:
 [María Peña](https://github.com/Keyleth8) | 780448 | [![Build Status](https://github.com/<YOUR-GITHUB-USER-NAME>/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/Keyleth8/lab1-git-race/actions/workflows/ci.yml)
