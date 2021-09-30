@@ -1,4 +1,4 @@
-FROM gradle:openj9 as builder
+FROM openjdk:11 as builder
 WORKDIR /app
 COPY . .
 RUN /app/gradlew bootJar
