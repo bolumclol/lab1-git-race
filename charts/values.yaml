@@ -3,7 +3,7 @@ appName: demo-minikube
 deployment:
   replicaCount: 1
   image:
-    repoitory: docker.io/tembleking/demo-minikube:latest
+    repository: docker.io/tembleking/demo-minikube:latest
     pullPolicy: Always
 
 service:

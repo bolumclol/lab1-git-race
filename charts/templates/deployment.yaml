@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
         - name: "{{ .Values.appName }}"
-          image: "{{.Values.deployment.image.repoitory}}"
+          image: "{{.Values.deployment.image.repository}}"
           imagePullPolicy: "{{ .Values.deployment.image.pullPolicy }}"
       restartPolicy: Always
