@@ -2,7 +2,7 @@ package es.unizar.webeng.hello.controller
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Controller
-import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.*
 
 /**
  * **Note**
@@ -49,9 +49,30 @@ class HelloController {
         return "welcome"
     }
 
+   /**
+    * This function acts as the handler of the HelloController.
+    * shows a template saying hello to the parameter pased by url
+    * 
+    * **Note**
+    * @param name parameter passed by url
+    * @param model collection with the data used to update the view (template)
+    * @return the template with the updated information
+    */
+    @GetMapping("/name/{name}")
+    fun new(@PathVariable name: String, model: MutableMap<String, Any>): String {
+        model["message"] = "Hello " + name 
+        return "new"
+    }
+
+   /**
+    * This function acts as the handler of the HelloController.
+    */ 
+    @GetMapping("/rest")
+    fun restAPIPage(): String {
+        return "restAPIPage"
+    }
+
     /**
-     * This function acts as a handler of the HelloController.
-     *
      * **Note** 
      * 
      * The view of this handler uses Mustache as language template. 

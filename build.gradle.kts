@@ -20,20 +20,21 @@ repositories {
 
 // Declares dependencies for implementation and testing
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web:2.5.4")
-    implementation("org.springframework.boot:spring-boot-starter-thymeleaf:2.5.4")
-    implementation("org.springframework.boot:spring-boot-starter-mustache:2.5.4")
+    implementation("org.springframework.boot:spring-boot-starter-web:2.5.5")
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf:2.5.5")
+    implementation("org.springframework.boot:spring-boot-starter-mustache:2.5.5")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.5")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.5.21")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
-    implementation("org.webjars:bootstrap:5.1.0")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.5.31")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31")
+    implementation("org.webjars:bootstrap:5.1.1")
+    implementation("org.springframework.boot:spring-boot-starter-data-redis:2.5.5")
 
     // Enables spring actuator. Required for metrics export.
-    implementation("org.springframework.boot:spring-boot-starter-actuator:2.5.4")
+    implementation("org.springframework.boot:spring-boot-starter-actuator:2.5.5")
     // Enables exporting metrics in /actuator/prometheus
     runtimeOnly("io.micrometer:micrometer-registry-prometheus:1.7.4")
 
-    testImplementation("org.springframework.boot:spring-boot-starter-test:2.5.4")
+    testImplementation("org.springframework.boot:spring-boot-starter-test:2.5.5")
 }
 
 // Makes Kotlin use the JVM 11 toolchain
