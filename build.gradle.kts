@@ -26,7 +26,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.5")
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.5.31")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31")
-    implementation("org.webjars:bootstrap:5.1.1")
+    implementation("org.webjars:bootstrap:5.1.0")
     implementation("org.springframework.boot:spring-boot-starter-data-redis:2.5.5")
 
     // Enables spring actuator. Required for metrics export.
