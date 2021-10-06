@@ -26,6 +26,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.webjars:bootstrap:5.1.0")
+    implementation("org.json:json:20171018")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
