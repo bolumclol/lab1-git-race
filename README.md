@@ -22,12 +22,9 @@ User name | NIA | CI |Score
 [Íñigo Aréjula](https://github.com/arejula27/lab1-git-race) | 785370 | [![Build Status](https://github.com/Tomenos18/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/arejula27/lab1-git-race/actions/workflows/ci.yml)
 [Óscar Pueyo Ciutad](https://github.com/iksopo) | 780378 | [![Build Status](https://github.com/iksopo/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/iksopo/lab1-git-race/actions/workflows/ci.yml) | **Moby Dick II** :gift:
 [Adrian Garcia](https://github.com/adrigaarcia/lab1-git-race) | 722292 | [![Build Status](https://github.com/adrigaarcia/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/adrigaarcia/lab1-git-race/actions/workflows/ci.yml) | **Moby Dick III** :gift:
-<<<<<<< HEAD
 [Jaime Yoldi Vigueras](https://github.com/jaimoyok/lab1-git-race.git) |779057 |[![Build Status](https://github.com/jaimoyok/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/Lulay7/lab1-git-race/actions/workflows/ci.yml)
-=======
 [Pablo Jordán Lucia](https://github.com/pabloJordan24/lab1-git-race) | 757166 | [![Build Status](https://github.com/pabloJordan24/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/pabloJordan24/lab1-git-race/actions/workflows/ci.yml)
 [José Marín Díez](https://github.com/jmarindiez/lab1-git-race) | 778148 | [![Build Status](https://github.com/jmarindiez/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/jmarindiez/lab1-git-race/actions/workflows/ci.yml) | **Home improvement (mustache)** :gift:
 [Diego Marco](https://github.com/dmarcob/lab1-git-race)| 755232 | [![Build Status](https://github.com/dmarcob/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/dmarcob/lab1-git-race/actions/workflows/ci.yml) | :gift:
 [Alejandro Magallón](https://github.com/alecron/lab1-git-race) | 779354 | [![Build Status](https://github.com/alecron/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/alecron/lab1-git-race/actions/workflows/ci.yml) | - **Home improvement II** :gift:
->>>>>>> 390c21fd5efb39e0061d2ec09270d992cee24cb7
 
