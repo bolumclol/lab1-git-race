@@ -14,6 +14,7 @@
     <div class="col-lg-6 mx-auto">
         <!--/*@thymesVar id="message" type="java.lang.String"*/-->
         <p class="lead mb-4" th:text="${message}">Hello student.</p>
+		<a class="btn btn-primary" th:onclick="|window.location.href='/changeLanguage'|" role="button">Change language</a>
     </div>
     <div class="col-lg-6 mx-auto">
         <!--/*@thymesVar id="direction" type="java.lang.String"*/-->

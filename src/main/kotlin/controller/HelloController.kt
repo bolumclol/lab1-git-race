@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.*
 class HelloController {
 
     /**
-     * **Note** 
-     * 
+     * **Note**
+     *
      * The annotation `@vValue` indicates a default value expression for the annotated
      * element. In this case, it sets the value of the String helloMessage to `"Hola estudiante"` and the String welcomeMessage to "Bienvenido a la universidad".
      */
@@ -35,7 +35,7 @@ class HelloController {
      * Thymeleaf templates has the extension `html` by default.
      * Thymeleaf templates requires to add the dependency `org.springframework.boot:spring-boot-starter-thymeleaf`.
      *
-     * The annotation [GetMapping] acts as a shortcut for `@RequestMapping(method =
+     * The annotation `@GetMapping` acts as a shortcut for `@RequestMapping(method =
      * RequestMethod.GET)`. This allows us to handle all the GET petitions to the path `/` using
 	 * this controller.
      *
@@ -60,7 +60,7 @@ class HelloController {
     */
     @GetMapping("/name/{name}")
     fun new(@PathVariable name: String, model: MutableMap<String, Any>): String {
-        model["message"] = "Hello " + name
+        model["message"] = "Hello $name"
         return "new"
     }
 
@@ -89,4 +89,23 @@ class HelloController {
     }
 
 
+
+    /**
+     * This function acts as the handler of the event "onClick" of the button "change language".
+     *
+
+     *
+     * @param model collection with the data used to update the view (template)
+     * @return the template with the updated information
+     */
+    @GetMapping("/changeLanguage")
+    fun handleButtonLanguage(model: MutableMap<String, Any>): String {
+        message = when (message) {
+            "Hola estudiante" -> "Hello student"
+            "Hello student" -> "Salut etudiant"
+            else -> "Hola estudiante"
+        }
+        model["message"] = message
+        return "welcome"
+    }
 }
