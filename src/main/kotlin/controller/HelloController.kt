@@ -46,39 +46,40 @@ class HelloController {
     fun welcome(model: MutableMap<String, Any>): String {
         // This is used to associate the variable "message" of the template welcome with a value.
         model["message"] = message
+        model["direction"] = "prueba"
         return "welcome"
     }
 
    /**
     * This function acts as the handler of the HelloController.
     * shows a template saying hello to the parameter pased by url
-    * 
+    *
     * @param name parameter passed by url
     * @param model collection with the data used to update the view (template)
     * @return the template with the updated information
     */
     @GetMapping("/name/{name}")
     fun new(@PathVariable name: String, model: MutableMap<String, Any>): String {
-        model["message"] = "Hello " + name 
+        model["message"] = "Hello " + name
         return "new"
     }
 
    /**
     * This function acts as the handler of the HelloController.
-    */ 
+    */
     @GetMapping("/rest")
     fun restAPIPage(): String {
         return "restAPIPage"
     }
 
     /**
-     * **Note** 
-     * 
-     * The view of this handler uses Mustache as language template. 
+     * **Note**
+     *
+     * The view of this handler uses Mustache as language template.
      * The view is `resources/templates/hello.mustache`.
      * Mustache templates has the extension `mustache` by default.
      * Mustache templates requires to add the dependency `org.springframework.boot:spring-boot-starter-mustache`.
-     * 
+     *
      */
     @GetMapping("/hello")
     fun hi(model: MutableMap<String, Any>): String {
@@ -86,5 +87,6 @@ class HelloController {
         model["message"] = helloMessage
         return "hello"
     }
+
 
 }
