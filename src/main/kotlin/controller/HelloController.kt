@@ -14,18 +14,19 @@ import org.springframework.web.bind.annotation.GetMapping
 class HelloController {
 
     /**
-     * **Note** 
-     * 
+     * **Note**
+     *
      * The annotation `@vValue` indicates a default value expression for the annotated
      * element. In this case, it sets the value of the String message to `"Hola estudiante"`.
      */
-    @Value("\${app.message}") private var message: String = "Hello World"
+    @Value("\${app.message}")
+    private var message: String = "Hello World"
 
     /**
      * This function acts as the handler of the HelloController.
      *
-     * **Note** 
-     * 
+     * **Note**
+     *
      * The annotation `@GetMapping` acts as a shortcut for `@RequestMapping(method =
      * RequestMethod.GET)`. This allows us to handle all the GET petitions to the path `/` using
      * this controller.
@@ -39,8 +40,8 @@ class HelloController {
         model["message"] = message
         return "welcome"
     }
-	
-	/**
+
+    /**
      * This function acts as the handler of the event "onClick" of the button "change language".
      *
 
@@ -48,12 +49,14 @@ class HelloController {
      * @param model collection with the data used to update the view (template)
      * @return the template with the updated information
      */
-	@GetMapping("/changeLanguage")
-	fun handleButtonLanguage(model: MutableMap<String, Any>): String {
-		if (message == "Hola estudiante") message = "Hello student"
-		else if (message == "Hello student") message = "Salut etudiant"
-		else message = "Hola estudiante"
+    @GetMapping("/changeLanguage")
+    fun handleButtonLanguage(model: MutableMap<String, Any>): String {
+        message = when (message) {
+            "Hola estudiante" -> "Hello student"
+            "Hello student" -> "Salut etudiant"
+            else -> "Hola estudiante"
+        }
         model["message"] = message
-		return "welcome"
-	}
+        return "welcome"
+    }
 }
