@@ -20,9 +20,11 @@ repositories {
 
 // Declares dependencies for implementation and testing
 dependencies {
+    // Kotlin plugin managed version dependencies
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
+    // Spring plugin managed version dependencies
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-redis")
 
@@ -32,9 +34,16 @@ dependencies {
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
-    implementation("org.webjars:bootstrap:5.1.0")
+    // Enables spring actuator. Required for metrics export.
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+    // Enables exporting metrics in /actuator/prometheus
+    runtimeOnly("io.micrometer:micrometer-registry-prometheus")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    // Dependencies with explicit version number
+    implementation("org.webjars:bootstrap:5.1.0")
 }
 
 // Makes Kotlin use the JVM 11 toolchain

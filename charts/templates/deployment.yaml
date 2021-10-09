@@ -1,12 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: {{ .Values.namespace }}
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/actuator/prometheus"
+    prometheus.io/port: "8080"
   name: {{ .Values.appName }}
   labels:
     app: {{ .Values.appName }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.deployment.replicaCount }}
   selector:
     matchLabels:
       app: {{ .Values.appName }}
@@ -17,6 +20,6 @@ spec:
     spec:
       containers:
         - name: "{{ .Values.appName }}"
-          image: "{{ .Values.image.registry }}/{{ .Values.appName }}:{{ .Values.appVersion }}"
-          imagePullPolicy: "{{ .Values.image.pullPolicy }}"
+          image: "{{.Values.deployment.image.repository}}"
+          imagePullPolicy: "{{ .Values.deployment.image.pullPolicy }}"
       restartPolicy: Always
