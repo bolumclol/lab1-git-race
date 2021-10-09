@@ -7,6 +7,17 @@ plugins {
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.5.30"
     kotlin("plugin.spring") version "1.5.30"
+
+    // Plugins for persistence
+    kotlin("plugin.jpa") version "1.5.30"
+    kotlin("plugin.allopen") version "1.5.30"
+}
+
+allOpen {
+  annotation("javax.persistence.Query")
+  annotation("javax.persistence.Entity")
+  annotation("javax.persistence.Embeddable")
+  annotation("javax.persistence.MappedSuperclass")
 }
 
 // Sets groupID and version of the task
@@ -34,8 +45,14 @@ dependencies {
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
     // Enables spring actuator. Required for metrics export.
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+    runtimeOnly("org.springframework.boot:spring-boot-devtools")
+
+    runtimeOnly("com.h2database:h2")
 
     // Enables exporting metrics in /actuator/prometheus
     runtimeOnly("io.micrometer:micrometer-registry-prometheus")
@@ -44,6 +61,7 @@ dependencies {
 
     // Dependencies with explicit version number
     implementation("org.webjars:bootstrap:5.1.0")
+
 }
 
 // Makes Kotlin use the JVM 11 toolchain
