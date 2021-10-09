@@ -7,6 +7,7 @@ package es.unizar.webeng.hello.controller
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.boot.test.mock.mockito.MockBean
@@ -16,9 +17,13 @@ import org.springframework.data.redis.core.ValueOperations
 import org.mockito.BDDMockito.given
 import org.mockito.BDDMockito.verify
 import org.mockito.BDDMockito.reset
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.context.junit.jupiter.SpringExtension
 
-@WebMvcTest(GameController::class)
-class GameControllerMVCTests {
+@ExtendWith(SpringExtension::class)
+@SpringBootTest
+class GameControllerUnitTests {
+
     @Autowired
     private lateinit var controller: GameController
 
@@ -33,10 +38,12 @@ class GameControllerMVCTests {
         const val SCORE: String = "20"
         const val MAXSCORE: String = "500"
         const val IP = "127.0.0.1"
+
         //Template's name returned by GameController
-        const val TEMPLATE : String = "game"
+        const val TEMPLATE: String = "game"
+
         //Atributte's name passed by GameController to the template
-        const val MAXSCORE_ATTR : String = "maxScore"
+        const val MAXSCORE_ATTR: String = "maxScore"
     }
 
     @Test
@@ -73,16 +80,15 @@ class GameControllerMVCTests {
         given(redisTemplate.opsForValue().get(request.remoteAddr)).willReturn(null)
         controller.getMaxScore(model, request)
         assertThat(model[MAXSCORE_ATTR]).isEqualTo("You haven't played yet")
- 
+
         // - when redisTemplate.opsForValue().get(request.remoteAddr) returns N 
         // model.maxScore is N
-        
+
         //Mocked redis get method to return SCORE when remoteAddr is passed
         given(redisTemplate.opsForValue().get(request.remoteAddr)).willReturn(SCORE)
         controller.getMaxScore(model, request)
         assertThat(model[MAXSCORE_ATTR]).isEqualTo(SCORE)
 
-        
 
         //Checks for POST endpoint:
         // - when redisTemplate.opsForValue().get(request.remoteAddr) returns null, 
@@ -94,7 +100,7 @@ class GameControllerMVCTests {
         controller.postMaxScore(model, request, SCORE)
         assertThat(model[MAXSCORE_ATTR]).isEqualTo(SCORE)
         //Check that redis set method was invoked only once.
-        verify(valueOperations).set(request.remoteAddr,SCORE)
+        verify(valueOperations).set(request.remoteAddr, SCORE)
 
         // - when redisTemplate.opsForValue().get(request.remoteAddr) returns a value 
         // lower than score, model.maxScore is score and 
@@ -111,6 +117,6 @@ class GameControllerMVCTests {
         given(redisTemplate.opsForValue().get(request.remoteAddr)).willReturn(MAXSCORE)
         controller.postMaxScore(model, request, SCORE)
         assertThat(model["maxScore"]).isEqualTo(MAXSCORE)
-        
+
     }
 }

@@ -35,9 +35,9 @@ class HelloController {
      * Thymeleaf templates has the extension `html` by default.
      * Thymeleaf templates requires to add the dependency `org.springframework.boot:spring-boot-starter-thymeleaf`.
      *
-     * The annotation `@GetMapping` acts as a shortcut for `@RequestMapping(method =
+     * The annotation [GetMapping] acts as a shortcut for `@RequestMapping(method =
      * RequestMethod.GET)`. This allows us to handle all the GET petitions to the path `/` using
-     * this controller.
+	 * this controller.
      *
      * @param model collection with the data used to update the view (thymeleaf template)
      * @return the template with the updated information
@@ -53,7 +53,6 @@ class HelloController {
     * This function acts as the handler of the HelloController.
     * shows a template saying hello to the parameter pased by url
     * 
-    * **Note**
     * @param name parameter passed by url
     * @param model collection with the data used to update the view (template)
     * @return the template with the updated information

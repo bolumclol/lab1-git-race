@@ -3,7 +3,6 @@ package es.unizar.webeng.hello.controller
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-
 /*
  *    This class contains a test that checks if the 'welcome' method
  *    for class HelloController in file 'HelloController.kt' is
@@ -40,7 +39,7 @@ class HelloControllerUnitTests {
         // value in variable 'view'
         val view = controller.welcome(map)
 
-        // Check if the return value of the welcome method is equal to "welcome"
+        // Check if the return value of the 'welcome' method is equal to "welcome"
         assertThat(view).isEqualTo("welcome")
 
         // Check if the map inside the controller contains the key "message"
