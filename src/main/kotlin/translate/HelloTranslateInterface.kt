@@ -12,5 +12,5 @@ interface HelloTranslateInterface {
     // Callback for the parsed response is the last parameter
     @Headers("Content-Type: application/json")
     @POST("translate")
-    fun translate(@Body translation:Translation ):Call<Translation>;
+    fun translate(@Body translation: Translation): Call<Translation>
 }
