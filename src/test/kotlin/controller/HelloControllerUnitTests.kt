@@ -40,12 +40,15 @@ class HelloControllerUnitTests {
         val view = controller.welcome(map)
 
         // Check if the return value of the 'welcome' method is equal to "welcome"
+
         assertThat(view).isEqualTo("welcome")
 
         // Check if the map inside the controller contains the key "message"
         assertThat(map.containsKey("message")).isTrue
 
         // Check if value for key "message" in map is "Hello World"
+        assertThat(map.containsKey("direction")).isTrue
         assertThat(map["message"]).isEqualTo("Hello World")
+        assertThat(map["direction"]).isEqualTo("prueba")
     }
 }
