@@ -33,4 +33,4 @@ User name | NIA | CI |Score
 [Sergio Benitez Mombiela](https://github.com/SergioBenitez755787/lab1-git-race) | 755787 | [![Build Status](https://github.com/SergioBenitez755787/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/SergioBenitez755787/lab1-git-race/actions/workflows/ci.yml)
 [Jorge Serrano Ibáñez](https://github.com/fntkg/lab1-git-race)| 776453 | [![Build Status](https://github.com/fntkg/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/fntkg/lab1-git-race/actions/workflows/ci.yml)
 [Héctor Bara Lles](https://github.com/dolansete/lab1-git-race) | 778097 | [![Build Status](https://github.com/dolansete/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/dolansete/lab1-git-race/actions/workflows/ci.yml)
-
+[María Peña](https://github.com/Keyleth8/lab1-git-race) | 780448 | [![Build Status](https://github.com/Keyleth8/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/Keyleth8/lab1-git-race/actions/workflows/ci.yml) | :gift:
