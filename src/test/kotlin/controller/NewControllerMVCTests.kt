@@ -13,15 +13,17 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 class NewControllerMVCTests {
 
     var name: String = "Hello andoni"
+
     /**
      * Mocks the Spring controller
      */
-    @Autowired private lateinit var mockMvc: MockMvc
+    @Autowired
+    private lateinit var mockMvc: MockMvc
 
     /**
      * With the controller [HelloController] mocked, test performs a GET request to server-side
      * endpoint "/" and:
-     * 
+     *
      * - print the response
      * - expect to receive an OK status (code 200)
      * - expect the attribute "message" of the model to be [name]
@@ -29,9 +31,9 @@ class NewControllerMVCTests {
     @Test
     fun testMVCMessage() {
         mockMvc.perform(get("/name/andoni"))
-                .andDo(print())
-                .andExpect(status().isOk)
-                .andExpect(model().attribute("message", equalTo(name)))
+            .andDo(print())
+            .andExpect(status().isOk)
+            .andExpect(model().attribute("message", equalTo(name)))
     }
 
 }

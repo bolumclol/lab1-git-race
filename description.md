@@ -278,6 +278,6 @@ git push heroku master
 Do not be afraid of detaching the `push` command, it won't cancel the build and the app will be deployed anyways.
 
 ### Configuration Metadata
+
 Spring Boot generate a metadata file called `"spring-configuration-metadata.json"` that provide details of all supported configuration properties.
 It's located in `src/main/resources/META-INF/`. There is a `property` identified by the `name` `app.message`, its default value is set in `application.properties`.
-
