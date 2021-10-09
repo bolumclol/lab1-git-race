@@ -29,7 +29,7 @@ class NewControllerUnitTests {
 
         // Executes 'new' controller method and saves returned
         // value in variable 'view'
-        val view = controller.new("andoni",map)
+        val view = controller.new("andoni", map)
 
         // Check if the return value of the welcome method is equal to "welcome"
         assertThat(view).isEqualTo("new")

@@ -27,8 +27,9 @@ gradlew check
 
 ## Controller
 
-The file `src/main/controller/HelloController.kts` contains the implementation of the controller of this web application following the MVC pattern.
-The handler function `welcome()` serves the view `src/main/resources/templates/welcome.html`.
+The directory `src/main/controller/` contains the implementation of the controller of this web application following the MVC pattern.
+The handler function `welcome()` in `src/main/controller/HelloController.kts` serves the view `src/main/resources/templates/welcome.html`.
+The handler function `date()` in `src/main/controller/DataController.kts` serves the view `src/main/resources/templates/date.ftlh`.
 
 ## Error
 
@@ -275,3 +276,8 @@ git push heroku master
 ```
 
 Do not be afraid of detaching the `push` command, it won't cancel the build and the app will be deployed anyways.
+
+### Configuration Metadata
+
+Spring Boot generate a metadata file called `"spring-configuration-metadata.json"` that provide details of all supported configuration properties.
+It's located in `src/main/resources/META-INF/`. There is a `property` identified by the `name` `app.message`, its default value is set in `application.properties`.
