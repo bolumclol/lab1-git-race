@@ -10,7 +10,7 @@ import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 
-/*
+/**
  *   Class using JUnit and SpringBootTest for running tests. These test will make sure
  *   the different modules of the system work together correctly.
  */
@@ -20,7 +20,7 @@ class IntegrationTest {
 
     @Autowired private lateinit var restTemplate: TestRestTemplate
 
-    /*
+    /**
      *   Test that checks if the local server is running, then checks the content
      *   of the home page's body. If it contains the title "Hello" the test passes.
      *   Otherwise the test fails.
@@ -36,10 +36,10 @@ class IntegrationTest {
         }
     }
 
-    /*
+    /**
      *   Test that checks if the headers of the bootstrap are css-based. For that,
      *   if the headers have a MIME datatype "text" and a subtype "css", the test passes.
-     *   Otherwise the test fails.
+     *   Otherwise, the test fails.
      */
     @Test
     fun testCss() {
@@ -56,6 +56,24 @@ class IntegrationTest {
             assertThat(body).contains("body")
             // Checks that the headers have the MIME type "text" and the subtype "css"
             assertThat(headers.contentType).isEqualTo(MediaType.valueOf("text/css"))
+        }
+    }
+
+    /**
+     *   Test that checks if the local server is running, then checks the content
+     *   of the 'date' page's body. If it contains the title "Date" and the text
+     *   "Today is ..." the test passes.
+     *   Otherwise, the test fails.
+     */
+    @Test
+    fun testDate() {
+        // Creates synchronous client to perform requests
+        with(restTemplate.getForEntity("http://localhost:$port/date", String::class.java)) {
+            // Checks the server is running correctly (returns code 200: "OK")
+            assertThat(statusCode).isEqualTo(HttpStatus.OK)
+            // Checks the body contains the title "Date"
+            assertThat(body).contains("<title>Date")
+            assertThat(body).contains("Today is ...")
         }
     }
 }
