@@ -187,6 +187,23 @@ Now you can access [the website](http://localhost:8080/) to check if everything 
 
 **Note:** By default, local port 8080 is used to deploy the app, however, it can be modified in ``docker-compose.yml``, setting ``8080:8080`` to ``<your-port>:8080``.
 
+## Localhost refused to connect issue
+
+If you have followed the steps correctly, but you see this message when you search localhost:8080 in your web browser:
+
+![Localhost refused to connect](https://raw.githubusercontent.com/dolansete/Imagenes/main/Screenshot%20from%202021-09-28%2015-02-42.png)
+
+Try to follow these steps:
+
+- Open your browser menu
+- Hover the mouse on "More tools"
+- Select "Clear browsing data"
+- Choose "All time" option and mark the three boxes
+- Press the clear data button
+(This is how you do it in Google Chrome, but it should be almost the same with other browsers)
+
+**Note:** If you have tried this and the error message is still there, check this [website](https://www.thecoldwire.com/localhost-refused-to-connect/#:~:text=Check%20Your%20Connection,router%20or%20call%20the%20ISP).
+
 ## With Kuvernetes
 
 Using Tomas' [Dockerfile](https://github.com/Tomenos18/lab1-git-race/blob/master/Dockerfile) and [Guide for the basic Docker Deployment](https://github.com/Tomenos18/lab1-git-race/blob/master/README.md)
