@@ -108,4 +108,19 @@ class HelloController {
         model["message"] = message
         return "welcome"
     }
+    
+    /**
+    * This function acts as the handler of the HelloController.
+    * shows a template saying if your nia (passed by url) is even or odd.
+    * 
+    * @param nia parameter passed by url
+    * @param model collection with the data used to update the view (template)
+    * @return the template with the updated information
+    */
+    @GetMapping("/isOdd/{nia}")
+    fun nia(@PathVariable nia: String, model: MutableMap<String, Any>): String {
+        if (nia.toInt()%2 == 0) model["message"] = "Your nia: $nia is even"
+        else  model["message"] = "Your nia: $nia is odd"
+        return "new"
+    }
 }
