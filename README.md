@@ -27,4 +27,5 @@ User name | NIA | CI |Score
 [Diego Marco](https://github.com/dmarcob/lab1-git-race)| 755232 | [![Build Status](https://github.com/dmarcob/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/dmarcob/lab1-git-race/actions/workflows/ci.yml) | :gift:
 [Alejandro Magallón](https://github.com/alecron/lab1-git-race) | 779354 | [![Build Status](https://github.com/alecron/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/alecron/lab1-git-race/actions/workflows/ci.yml) | - **Home improvement II** :gift:
 [Diego García Muro](https://github.com/thdgm)| 767870 | [![Build Status](https://github.com/thdgm/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/thdgm/lab1-git-race/actions/workflows/ci.yml)
+[Binhui Chen Zhou](https://github.com/779799/lab1-git-race) | 779799 | [![Build Status](https://github.com/779799/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/779799/lab1-git-race/actions/workflows/ci.yml) | :gift:
 
