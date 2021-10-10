@@ -33,6 +33,6 @@ class HelloTranslate(
     }
 
     companion object {
-        private const val URL_TRANSLATE_API = "https://translate.astian.org/"
+        private const val URL_TRANSLATE_API = "https://translate.argosopentech.com/"
     }
 }
