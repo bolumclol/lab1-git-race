@@ -23,5 +23,5 @@ gradle-app.setting
 # Ignore other files
 .classpath
 .project
-.settings/org.eclipse.buildship.core.prefs
-.vscode/settings.json
+.settings/
+.vscode/
