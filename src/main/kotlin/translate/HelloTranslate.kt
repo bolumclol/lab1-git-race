@@ -16,7 +16,7 @@ class HelloTranslate(
     private var from: String = "auto",
     private var to: String = "en",
     private var format: String = "text"
-    ) {
+) {
 
     fun translate(sourceText: String): String {
         val gson = GsonBuilder()
