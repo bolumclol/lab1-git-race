@@ -5,6 +5,10 @@ import retrofit2.http.POST
 import retrofit2.http.Headers
 import retrofit2.http.Body
 
+/**
+ * This interface defines a collection of functions for 
+ * calling the external API of translation.
+ */
 interface HelloTranslateInterface {
     /**
      * Note:

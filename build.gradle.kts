@@ -65,6 +65,7 @@ dependencies {
     implementation("org.webjars:bootstrap:5.1.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("org.json:json:20210307")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
