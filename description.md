@@ -218,17 +218,17 @@ Requirements:
 Steps to reproduce (adapted from [this tutorial](https://dev.to/gateixeira/deploying-a-spring-boot-kotlin-app-on-kubernetes-with-docker-and-helm-589p)):
 
 1. Create the following files:
-  
+
    - `Dockerfile` in root dir
    - `/charts/values.yaml`
    - `/charts/Chart.yaml`
    - `/charts/templates/deployment.yaml`
    - `/charts/templates/service.yaml`
-  
+
   The only difference with the original tutorial is in `values.yaml` file, where `appName` is now `demo-minikube`, and `image/registry` is now your DockerID.
 
 1. Switch Docker environment (from `Dockerfile` directory):
-  
+
    - MacOS / Linux:
 
      ```bash
@@ -299,15 +299,15 @@ Do not be afraid of detaching the `push` command, it won't cancel the build and 
 Spring Boot generate a metadata file called `"spring-configuration-metadata.json"` that provide details of all supported configuration properties.
 It's located in `src/main/resources/META-INF/`. There is a `property` identified by the `name` `app.message`, its default value is set in `application.properties`.
 
-### On Google Cloud with App Engine 
-Google Cloud can be used to launch Spring Boot applications. One way to do it is using App Engine. App Engine is a web hosting service provided by Google for free. 
+### On Google Cloud with App Engine
+Google Cloud can be used to launch Spring Boot applications. One way to do it is using App Engine. App Engine is a web hosting service provided by Google for free.
 
 To run in App Engine, you can create a project in the UI, which sets up a unique identifier for you and also sets up HTTP routes. Secondly, you have to add the Java app to the project and leave it empty. Then, you have to use the Google Cloud SDK to push your Spring Boot app into that slot from the command line or CI build. Therefore, you need to install Google Cloud SDK in your device. You can initialize the Cloud SDK using `gcloud init` int the command line.
-Next [link] (https://cloud.google.com/sdk/install) can help you to install CLoud SDK if you have any problem. 
+Next [link] (https://cloud.google.com/sdk/install) can help you to install CLoud SDK if you have any problem.
 
-App Engine Standard requieres you to use WAR packaging. If you have an existing JAR packaging project, you can convert it into a WAR project by: 
+App Engine Standard requieres you to use WAR packaging. If you have an existing JAR packaging project, you can convert it into a WAR project by:
 1. In pom.xml, change `<packaging>jar</packaging>` to `<packaging>war</packaging>`
-2. Create a new SpringBootServletInitializer implementation 
+2. Create a new SpringBootServletInitializer implementation
 
 You can deploy the app (for example, with a Maven plugin) by adding the project ID to the build configuration, as shown in the following example:
 
