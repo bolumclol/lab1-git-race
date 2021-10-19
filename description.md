@@ -298,3 +298,28 @@ Do not be afraid of detaching the `push` command, it won't cancel the build and 
 
 Spring Boot generate a metadata file called `"spring-configuration-metadata.json"` that provide details of all supported configuration properties.
 It's located in `src/main/resources/META-INF/`. There is a `property` identified by the `name` `app.message`, its default value is set in `application.properties`.
+
+## With a Dockerfile (using windows 10 home)
+
+Since The standard Docker release needs Hyper-V to be available on windows to run properly and Hyper-V is only available on windows 10 pro, we need to follow the steps detailed [here](https://www.how2shout.com/how-to/install-docker-without-hyper-v-on-windows-10-7.html):
+
+1. We need to download one version of `Docker Toolbox` installer (they are more than one available, I use the latest) :
+
+
+2. When it finishes, we are going to start the `Docker Toolbox Setup Wizard` following the steps using the default options (or if you want, in addition to that you can install additional components like `kitematic`).
+
+
+3. Later, when the installation is complete, you can simply double click on the `Docker Quickstar Terminal` and you will see on your Desktop and wait till Docker starts.
+
+
+4. Finally follow the steps detailed in the Docker deploy seccion above to deploy the application.
+
+### Watch out
+
+Sometimes when cloning a github repository using windows the files adopt MS-DOS line ending format, and can lead to errors like:
+
+```text
+/usr/bin/env: ‘sh\r’: No such file or directory
+```
+
+In this cases, a solution is to use a tool like `dos2unix` that you can install using [chocolatery](https://community.chocolatey.org/packages/dos2unix) and use it to give the unix format to that files.
