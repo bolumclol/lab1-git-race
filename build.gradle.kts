@@ -50,6 +50,8 @@ dependencies {
     // Enables spring actuator. Required for metrics export.
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
 
     runtimeOnly("com.h2database:h2")
@@ -65,9 +67,7 @@ dependencies {
     implementation("org.webjars:bootstrap:5.1.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("org.json:json:20210307")
-
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.json:json:20171018")
 
 }
 
