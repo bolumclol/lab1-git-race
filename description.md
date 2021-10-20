@@ -218,17 +218,17 @@ Requirements:
 Steps to reproduce (adapted from [this tutorial](https://dev.to/gateixeira/deploying-a-spring-boot-kotlin-app-on-kubernetes-with-docker-and-helm-589p)):
 
 1. Create the following files:
-  
+
    - `Dockerfile` in root dir
    - `/charts/values.yaml`
    - `/charts/Chart.yaml`
    - `/charts/templates/deployment.yaml`
    - `/charts/templates/service.yaml`
-  
+
   The only difference with the original tutorial is in `values.yaml` file, where `appName` is now `demo-minikube`, and `image/registry` is now your DockerID.
 
 1. Switch Docker environment (from `Dockerfile` directory):
-  
+
    - MacOS / Linux:
 
      ```bash
@@ -299,15 +299,15 @@ Do not be afraid of detaching the `push` command, it won't cancel the build and 
 Spring Boot generate a metadata file called `"spring-configuration-metadata.json"` that provide details of all supported configuration properties.
 It's located in `src/main/resources/META-INF/`. There is a `property` identified by the `name` `app.message`, its default value is set in `application.properties`.
 
-### On Google Cloud with App Engine 
-Google Cloud can be used to launch Spring Boot applications. One way to do it is using App Engine. App Engine is a web hosting service provided by Google for free. 
+### On Google Cloud with App Engine
+Google Cloud can be used to launch Spring Boot applications. One way to do it is using App Engine. App Engine is a web hosting service provided by Google for free.
 
 To run in App Engine, you can create a project in the UI, which sets up a unique identifier for you and also sets up HTTP routes. Secondly, you have to add the Java app to the project and leave it empty. Then, you have to use the Google Cloud SDK to push your Spring Boot app into that slot from the command line or CI build. Therefore, you need to install Google Cloud SDK in your device. You can initialize the Cloud SDK using `gcloud init` int the command line.
-Next [link] (https://cloud.google.com/sdk/install) can help you to install CLoud SDK if you have any problem. 
+Next [link] (https://cloud.google.com/sdk/install) can help you to install CLoud SDK if you have any problem.
 
-App Engine Standard requieres you to use WAR packaging. If you have an existing JAR packaging project, you can convert it into a WAR project by: 
+App Engine Standard requieres you to use WAR packaging. If you have an existing JAR packaging project, you can convert it into a WAR project by:
 1. In pom.xml, change `<packaging>jar</packaging>` to `<packaging>war</packaging>`
-2. Create a new SpringBootServletInitializer implementation 
+2. Create a new SpringBootServletInitializer implementation
 
 You can deploy the app (for example, with a Maven plugin) by adding the project ID to the build configuration, as shown in the following example:
 
@@ -322,3 +322,27 @@ You can deploy the app (for example, with a Maven plugin) by adding the project 
 
 Then deploy with `mvn appengine:deploy` (if you need to authenticate first, the build fails).
 
+## With a Dockerfile (using windows 10 home)
+
+Since The standard Docker release needs Hyper-V to be available on windows to run properly and Hyper-V is only available on windows 10 pro, we need to follow the steps detailed [here](https://www.how2shout.com/how-to/install-docker-without-hyper-v-on-windows-10-7.html):
+
+1. We need to download one version of `Docker Toolbox` installer (they are more than one available, I use the latest) :
+
+
+2. When it finishes, we are going to start the `Docker Toolbox Setup Wizard` following the steps using the default options (or if you want, in addition to that you can install additional components like `kitematic`).
+
+
+3. Later, when the installation is complete, you can simply double click on the `Docker Quickstar Terminal` that you will see on your Desktop and wait till Docker starts.
+
+
+4. Finally follow the steps detailed in the Docker deploy seccion above to deploy the application.
+
+### Watch out
+
+Sometimes when cloning a github repository using windows the files adopt MS-DOS line ending format, and can lead to errors like:
+
+```text
+/usr/bin/env: ‘sh\r’: No such file or directory
+```
+
+In that case, a solution might be to use a tool like `dos2unix` that you can install using [chocolatery](https://community.chocolatey.org/packages/dos2unix) and use it to give the unix format to that files.
