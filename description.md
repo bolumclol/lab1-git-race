@@ -348,6 +348,20 @@ Sometimes when cloning a github repository using windows the files adopt MS-DOS 
 
 In that case, a solution might be to use a tool like `dos2unix` that you can install using [chocolatery](https://community.chocolatey.org/packages/dos2unix) and use it to give the unix format to that files.
 
+### On Azure Spring Cloud
+
+The following prerequisites are required to deploy Spring Boot Web to Azure Spring Cloud:
+
+- An Azure subscription, 1.8 JDK version or later and a Git client.
+
+We will need to provision an Azure Spring Cloud cluster using [Azure Portal](https://azure.microsoft.com/es-es/account/) to complete the first step to config and deploy our Kotlin app to Azure Spring Cloud.
+
+Then, we are going to config our web app from the terminal window using [Maven Plugin](https://github.com/microsoft/azure-maven-plugins/tree/develop/azure-spring-cloud-maven-plugin/) by typing: `./mvnw com.microsoft.azure:azure-spring-cloud-maven-plugin:1.3.0:config`. It will autenticate with Azure.
+
+If we want to configure the deployment, we need to run the maven command in the command prompt selecting our Azure Spring Cloud cluster, accept default for app name and then press 'y' to expose public access for this app. When you get the confirm message (Y/N) prompt, press 'y' and our configuration will be done. Optionally we can see our configuration in file `pom.xml`.
+
+Now, our configuration is done. Our Spring Boot Web is ready to be deployed. We will deploy it by executing `mvn azure-spring-cloud:deploy`. After a few minutes, we only have to navigate to the URL in a web browser.
+
 ## **Home improvement III**: Use moder JS framework (React) and a Restful web service (no MVC server side)
 
 ### Building the app using React JS
