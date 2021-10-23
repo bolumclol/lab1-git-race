@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="px-4 py-5 my-5 text-center">
+
+    <h1 class="display-5 fw-bold">Wich string is the longest?</h1>
+    <div class="col-lg-6 mx-auto">
+        <!--/*@thymesVar id="message" type="java.lang.String"*/-->
+        <p class="lead mb-4">Insert the two strings</p>
+		<input type="text" style="margin-bottom: 10px;" class="form-control" id="string1" placeholder="String 1">
+		<input type="text" style="margin-bottom: 10px;" class="form-control" id="string2" placeholder="String 2">
+    </div>
+	<a id="btnComparar" class="btn btn-primary" style="align-self:center; color:white;">Compare</a>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$('#btnComparar').click(function () {
+        let cadena1len = $('#string1').val().length;
+		let cadena2len = $('#string2').val().length;
+		let cadena1str = $('#string1').val();
+		let cadena2str = $('#string2').val();
+		if (cadena1len < cadena2len) {
+		  alert(cadena1str + ' is smaller than ' + cadena2str)
+		} else if (cadena1len > cadena2len) {
+		  alert(cadena1str + ' is longer than ' + cadena2str)
+		} else {
+		  alert(cadena1str + ' and ' + cadena2str + ' have the same length')
+		}
+    });
+</script>
+</html>
+
