@@ -300,25 +300,29 @@ Spring Boot generate a metadata file called `"spring-configuration-metadata.json
 It's located in `src/main/resources/META-INF/`. There is a `property` identified by the `name` `app.message`, its default value is set in `application.properties`.
 
 ### On Google Cloud with App Engine
+
 Google Cloud can be used to launch Spring Boot applications. One way to do it is using App Engine. App Engine is a web hosting service provided by Google for free.
 
 To run in App Engine, you can create a project in the UI, which sets up a unique identifier for you and also sets up HTTP routes. Secondly, you have to add the Java app to the project and leave it empty. Then, you have to use the Google Cloud SDK to push your Spring Boot app into that slot from the command line or CI build. Therefore, you need to install Google Cloud SDK in your device. You can initialize the Cloud SDK using `gcloud init` int the command line.
-Next [link] (https://cloud.google.com/sdk/install) can help you to install CLoud SDK if you have any problem.
+Next [link](https://cloud.google.com/sdk/install) can help you to install CLoud SDK if you have any problem.
 
 App Engine Standard requieres you to use WAR packaging. If you have an existing JAR packaging project, you can convert it into a WAR project by:
+
 1. In pom.xml, change `<packaging>jar</packaging>` to `<packaging>war</packaging>`
 2. Create a new SpringBootServletInitializer implementation
 
 You can deploy the app (for example, with a Maven plugin) by adding the project ID to the build configuration, as shown in the following example:
 
-`<plugin>`
-    `<groupId>com.google.cloud.tools</groupId>`
-    `<artifactId>appengine-maven-plugin</artifactId>`
-    `<version>1.3.0</version>`
-    `<configuration>`
-        `<project>myproject</project>`
-    `</configuration>`
-`</plugin>`
+```xml
+<plugin>
+    <groupId>com.google.cloud.tools</groupId>
+    <artifactId>appengine-maven-plugin<artifactId>
+    <version>1.3.0</version>
+    <configuration>
+        <project>myproject</project>
+    </configuration>
+</plugin>
+```
 
 Then deploy with `mvn appengine:deploy` (if you need to authenticate first, the build fails).
 
@@ -328,12 +332,9 @@ Since The standard Docker release needs Hyper-V to be available on windows to ru
 
 1. We need to download one version of `Docker Toolbox` installer (they are more than one available, I use the latest) :
 
-
 2. When it finishes, we are going to start the `Docker Toolbox Setup Wizard` following the steps using the default options (or if you want, in addition to that you can install additional components like `kitematic`).
 
-
 3. Later, when the installation is complete, you can simply double click on the `Docker Quickstar Terminal` that you will see on your Desktop and wait till Docker starts.
-
 
 4. Finally follow the steps detailed in the Docker deploy seccion above to deploy the application.
 
@@ -346,3 +347,24 @@ Sometimes when cloning a github repository using windows the files adopt MS-DOS 
 ```
 
 In that case, a solution might be to use a tool like `dos2unix` that you can install using [chocolatery](https://community.chocolatey.org/packages/dos2unix) and use it to give the unix format to that files.
+
+## **Home improvement III**: Use moder JS framework (React) and a Restful web service (no MVC server side)
+
+### Building the app using React JS
+
+First of all, for building the project in React JS you must execute the following command: npm i && npm run build
+
+The first command installs the modules used by react and the second one runs "Webpack" which is a module bundler for JavaScript applications.
+
+After building the project, you can run your application with gradle: ./gradlew bootRun
+
+For checking if it works you can find the page on <http://localhost:8080/react>
+
+### Webpack
+
+Webpack is a library that allows us to manage all the necessary resources to run our application through the use of ES6 syntax within Javascript source code. When this module bundler processes the application, it internally builds a dependency graph from one or more entry points and then combines every module the project needs into one or more bundles, which are static assets to serve the content from.
+
+### Guide
+
+The guide which I have used to carry out this practice section has been React.js and Spring Data REST:
+<https://spring.io/guides/tutorials/react-and-spring-data-rest/>

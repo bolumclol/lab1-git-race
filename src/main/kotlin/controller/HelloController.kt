@@ -121,6 +121,14 @@ class HelloController {
     }
 
     /**
+     * This function acts as the handler of the HelloController.
+     */
+    @GetMapping("/react")
+    fun restAPIReact(): String {
+        return "restAPIReact"
+    }
+
+    /**
      * **Note**
      *
      * The view of this handler uses Mustache as language template.

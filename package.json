@@ -1,0 +1,41 @@
+{
+  "name": "lab1-git-race",
+  "version": "0.1.0",
+  "description": "ReactJS + API REST",
+  "main": "./src/main/js/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angela-rs/lab1-git-race.git"
+  },
+  "keywords": [
+    "rest",
+    "hateoas",
+    "spring",
+    "data",
+    "react"
+  ],
+  "author": "Angela Rojo Sediles, 774335",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angela-rs/lab1-git-race/issues"
+  },
+  "homepage": "https://github.com/angela-rs/lab1-git-race#readme",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "rest": "^1.3.1"
+  },
+  "scripts": {
+    "build": "webpack --config=webpack.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "html-webpack-plugin": "^5.4.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  }
+}

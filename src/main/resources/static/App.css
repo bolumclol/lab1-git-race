@@ -1,0 +1,38 @@
+.App {
+    text-align: center !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+    display: block;
+    font-family: system-ui;
+    color:#212529;
+  }
+  
+  .imgLogo{
+    margin-bottom: 1.5rem !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    display: block !important;
+  } 
+  
+  .title{
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    font-size: calc(1.2rem + 2.1vw);
+    line-height: 1.2;
+    font-weight: 700 !important;
+  }
+  
+  .Body{
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  
+  .parag{
+    margin-bottom: 1.5rem !important;
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
