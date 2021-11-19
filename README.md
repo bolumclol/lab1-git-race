@@ -44,3 +44,4 @@ User name | NIA | CI |Score
 [Salomé Rea Ávila](https://github.com/SalomeReav/lab1-git-race) | 720162 | [![Build Status](https://github.com/SalomeReav/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/SalomeReav/lab1-git-race/actions/workflows/ci.yml)
 [Mauricio Andrés Rosso](https://github.com/MauriRosso/lab1-git-race) | 847512 | [![Build Status](https://github.com/MauriRosso/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/MauriRosso/lab1-git-race/actions/workflows/ci.yml)
 [Guillermo Cánovas González](https://github.com/guillecanovas/lab1-git-race) | 755848 | [![Build Status](https://github.com/guillecanovas/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/guillecanovas/lab1-git-race/actions/workflows/ci.yml)
+[Bolu Li Yuan | 718197 | [![Build Status](https://github.com/bolumclol/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/bolumclol/lab1-git-race/actions/workflows/ci.yml)
