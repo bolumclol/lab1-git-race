@@ -32,7 +32,6 @@
 					Invalid link (error page)
 				</a>
 			</li>
-			
 		</ul>
 	</div>
 	<!-- End of the sidebar menu -->
@@ -64,31 +63,7 @@
 
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
 			<p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
-
 		</form>
-	    	<div class="form-label-group">
-        		<input type="text" id="yodaQuote" class="form-control" placeholder="Enter the quote" required>
-      		</div>
-			<br>
-			<button id ="yodaButton" class="btn btn-lg btn-primary btn-block">Translate to yoda</button>
-			<p class="lead mb-4" id="yodaTranslated">SENTENCE</p>
-			<p class="mt-5 mb-3 text-muted text-center">&copy; 2021-2022</p>
-		
-		
 	</div>
-	<script>
-		var yodaTranslate
-		document.getElementById("yodaButton").onclick = function(){
-			var myUrlWithParams = new URL("https://api.funtranslations.com/translate/yoda.json")
-			myUrlWithParams.searchParams.append("text", document.getElementById("yodaQuote").value  )
-			console.log(myUrlWithParams.href)
-			fetch(myUrlWithParams.href)
-			.then( (data)  => data.json() )
-			.then( (translation) => generate(translation) )
-		}
-		const generate = (data) => {
-			document.getElementById("yodaTranslated").innerHTML = data.contents.translated
-		}
-	</script>
   </body>
 </html>
